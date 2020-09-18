@@ -1,0 +1,14 @@
+# This file controls how Fivetran runs your transformation scripts.
+# For each transform, include the name of the file, what type of trigger, and trigger details.
+# Trigger options are 1. table (transformation will run when fresh data arrives from Fivetran)
+#                  or 2. interval (transformation will run on a set time schedule)
+---
+name: test_transformation.sql
+trigger:
+  type: interval
+  interval: 24h
+---
+name: customer_history.sql
+trigger:
+  type: interval
+  interval: 24h
