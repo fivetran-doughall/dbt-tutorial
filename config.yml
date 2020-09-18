@@ -12,3 +12,20 @@ name: customer_history.sql
 trigger:
   type: interval
   interval: 24h
+---  
+  name: aggregation_script.sql
+trigger:
+  type: table
+  tables:
+  - salesforce.order
+---
+name: de_duplication.sql
+trigger:
+  type: interval
+  interval: 3h
+---
+name: audit_copy.sql
+trigger:
+  type: interval
+  interval: 3h
+
